@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana-lab
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: grafana
+    repoURL: https://github.com/grafana/helm-charts/tree/main/charts
+    targetRevision: 6.50.7
+    helm:
+      releaseName: grafana-lab 
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: monitoring
