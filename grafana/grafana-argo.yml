@@ -11,6 +11,9 @@ spec:
     targetRevision:  8.2.26
     helm:
       releaseName: grafana-lab 
+      valueFiles:
+        - values-custom.yml
+
   destination:
     server: "https://kubernetes.default.svc"
     namespace: monitoring
