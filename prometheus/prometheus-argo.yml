@@ -9,10 +9,10 @@ spec:
     repoURL: https://prometheus-community.github.io/helm-charts 
     targetRevision: 19.6.1
     chart: prometheus
-    helm:
-      values: |
-        persistentVolume:
-          enabled: false
+    # helm:
+    #   values: |
+    #     persistentVolume:
+    #       enabled: false
   destination:
     server: "https://kubernetes.default.svc"
     namespace: prometheus
