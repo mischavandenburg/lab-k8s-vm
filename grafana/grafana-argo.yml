@@ -6,14 +6,14 @@ metadata:
 spec:
   project: default
   source:
+    repoURL: https://grafana.github.io/helm-charts
+    targetRevision: 6.50.7
     chart: grafana
-    repoURL: https://charts.bitnami.com/bitnami
-    targetRevision:  8.2.26
-    helm:
-      releaseName: grafana-lab 
-      values: |
-        persistence:
-          enabled: false
+    # helm:
+    #   releaseName: grafana-lab 
+    #   values: |
+    #     persistence:
+    #       enabled: false
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: monitoring
+    namespace: grafana
