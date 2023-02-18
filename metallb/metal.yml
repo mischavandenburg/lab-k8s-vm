@@ -6,8 +6,7 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - 141.144.192.101-141.144.192.101
-  autoAssign: true
+  - 141.144.192.101/32
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
